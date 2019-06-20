@@ -5,9 +5,6 @@ const client = new Client({
   ssl: true,
 });
 
-client.connect();
-
-
 
 
 const express = require('express');
@@ -20,13 +17,17 @@ app.use(favicon(__dirname + '/build/favicon.ico'));
 app.use(express.static(__dirname));
 app.use(express.static(path.join(__dirname, 'build')));
 app.get('/ping', function (req, res) {
- return client.query('SELECT * FROM teams;', (err, res) => {
-  if (err) throw err;
-  for (let row of res.rows) {
-    console.log(JSON.stringify(row));
-  }
-  client.end();
-}).JSON();
+
+  client.connect();
+
+  return client.query('SELECT * FROM teams;', (err, res) => {
+    if (err) throw err;
+    for (let row of res.rows) {
+      return res.send(JSON.stringify(row));
+    }
+    client.end();
+    return res.send("pong")
+  });
 });
 app.get('/*', function (req, res) {
   res.sendFile(path.join(__dirname, 'build', 'index.html'));
