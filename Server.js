@@ -12,7 +12,7 @@ client.query('SELECT * FROM teams;', (err, res) => {
   for (let row of res.rows) {
     console.log(JSON.stringify(row));
   }
-  client.end();
+  //client.end();
 });
 
 
