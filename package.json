@@ -18,7 +18,7 @@
     "sequelize": "^5.8.10"
   },
   "scripts": {
-    "start": "babel-node Server.js",
+    "start": "node Server.js",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
@@ -37,9 +37,5 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  },
-  "devDependencies": {
-    "babel-preset-env": "^1.7.0",
-    "nodemon": "^1.19.1"
   }
 }
