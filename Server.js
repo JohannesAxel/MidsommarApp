@@ -1,5 +1,4 @@
 import routes from './server/routes';
-import http from 'http'
 
 const express = require('express');
 const favicon = require('express-favicon');
@@ -9,9 +8,6 @@ const serverPort = 5432;
 const app = express();
 const bodyParser = require('body-parser')
 
-
-const hostname = 'ec2-54-83-201-84.compute-1.amazonaws.com';
-const server = http.createServer(app);
 routes(app);
 app.use(favicon(__dirname + '/build/favicon.ico'));
 // the __dirname is the current directory from where the script is running
@@ -28,7 +24,3 @@ app.get('/*', function (req, res) {
 });
 app.listen(appPort);
 
-
-///server.listen(serverPort, hostname, () => {
-  //console.log(`Server running at http://${hostname}:${port}/`);
-//});
