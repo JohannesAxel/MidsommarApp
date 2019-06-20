@@ -1,4 +1,20 @@
+const { Client } = require('pg');
 
+const client = new Client({
+  connectionString: process.env.DATABASE_URL,
+  ssl: true,
+});
+
+client.connect();
+
+/*client.query('SELECT table_schema,teams FROM information_schema.tables;', (err, res) => {
+  if (err) throw err;
+  for (let row of res.rows) {
+    console.log(JSON.stringify(row));
+  }
+  client.end();
+});
+*/
 const express = require('express');
 const favicon = require('express-favicon');
 const path = require('path');
