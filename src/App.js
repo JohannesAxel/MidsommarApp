@@ -37,13 +37,13 @@ export default class App extends Component {
           <h1 className='header'>snAppsen Open 2019</h1>
         </div>
         <div className='row te'>
-            <h5>Lag 1: {this.state.team1}</h5>
+            <h5>Lag 1: Asspadz Slicklapp{this.state.team1}</h5>
           </div>
           <div className='row te'>
-            <h5>Lag 2: {this.state.team2}</h5>
+            <h5>Lag 2: Läckeröbitarna{this.state.team2}</h5>
           </div>
           <div className='row te'>
-            <h5>Lag 3: {this.state.team3}</h5>
+            <h5>Lag 3: SSS{this.state.team3}</h5>
           </div>
         <div className='row team'>
           <div className='col-6'>
