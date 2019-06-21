@@ -37,26 +37,26 @@ export default class App extends Component {
           <h1 className='header'>snAppsen Open 2019</h1>
         </div>
         <div className='row te'>
-            <h5>Lag 1: Asspadz Slicklapp{this.state.team1}</h5>
+            <h7>Lag 1: Asspadz Slicklapp{this.state.team1}</h7>
           </div>
           <div className='row te'>
-            <h5>Lag 2: Läckeröbitarna{this.state.team2}</h5>
+            <h7>Lag 2: Läckeröbitarna{this.state.team2}</h7>
           </div>
           <div className='row te'>
-            <h5>Lag 3: SSS{this.state.team3}</h5>
+            <h7>Lag 3: SSS{this.state.team3}</h7>
           </div>
         <div className='row team'>
           <div className='col-6'>
             <p></p>
           </div>
           <div className='col-2'>
-            <h5>Lag 1</h5>
+            <h7>Lag 1</h7>
           </div>
           <div className='col-2'>
-            <h5>Lag 2</h5>
+            <h7>Lag 2</h7>
           </div>
           <div className='col-2'>
-            <h5>Lag 3</h5>
+            <h7>Lag 3</h7>
           </div>
         </div>
         <div className='comp fruit'>
