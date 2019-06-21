@@ -1,33 +1,53 @@
-.App {
+.header {
+font-size: 60px;
+font-style: oblique;
+font-weight: bold;
+color: #000;
+top: 30px;
+width: 100%;
+min-height: 30px;
+display: inline-block;
+text-align: center;
+margin: 1em;
+}
+
+.container {
   text-align: center;
+  padding-left: auto;
+  padding-right: auto;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
-  pointer-events: none;
+.comp {
+  margin-bottom: 3em;
+  padding: 1.5em;
+  border-radius: 10em;
+}
+.fruit {
+  background-color: #ac9658
+}
+.voi {
+background-color:#f46c62
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.angry {
+ background-color: #d0012c
 }
 
-.App-link {
-  color: #61dafb;
+.netflix {
+  background-color: black;
+  color: #d03e30
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.slide {
+  background-color: #4ba117
+}
+
+.result {
+  background-color: #36cefc;
+  color: yellow
+}
+
+.team {
+  margin-bottom: 1em;
+  word-break: break-all;
 }
