@@ -9,9 +9,9 @@ export default class App extends Component {
       team1: "placeholder1",
       team2: "placeholder2",
       team3: "placeholder3",
-      t1comp1:  "",
-      t2comp1:  "",
-      t3comp1:  "",
+      t1comp1:  0,
+      t2comp1:  1,
+      t3comp1:  2,
       t1comp2:  "",
       t2comp2:  "",
       t3comp2:  "",
@@ -36,18 +36,27 @@ export default class App extends Component {
         <div className='row' style={{ textAlign: "center" }}>
           <h1 className='header'>snAppsen Open 2019</h1>
         </div>
+        <div className='row te'>
+            <h5>Lag 1: {this.state.team1}</h5>
+          </div>
+          <div className='row te'>
+            <h5>Lag 2: {this.state.team2}</h5>
+          </div>
+          <div className='row te'>
+            <h5>Lag 3: {this.state.team3}</h5>
+          </div>
         <div className='row team'>
           <div className='col-6'>
-            <h2>Lagnamn:</h2>
+            <p></p>
           </div>
           <div className='col-2'>
-            <h3>{this.state.team1}</h3>
+            <h5>Lag 1</h5>
           </div>
           <div className='col-2'>
-            <h3>{this.state.team2}</h3>
+            <h5>Lag 2</h5>
           </div>
           <div className='col-2'>
-            <h3>{this.state.team3}</h3>
+            <h5>Lag 3</h5>
           </div>
         </div>
         <div className='comp fruit'>
