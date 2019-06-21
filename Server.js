@@ -1,11 +1,3 @@
-const { Client } = require('pg');
-
-const client = new Client({
-  connectionString: process.env.DATABASE_URL,
-  ssl: true,
-});
-
-
 
 const express = require('express');
 const favicon = require('express-favicon');
@@ -17,17 +9,7 @@ app.use(favicon(__dirname + '/build/favicon.ico'));
 app.use(express.static(__dirname));
 app.use(express.static(path.join(__dirname, 'build')));
 app.get('/ping', function (req, res) {
-
-  client.connect();
-
-  return client.query('SELECT * FROM teams;', (err, res) => {
-    if (err) throw err;
-    for (let row of res.rows) {
-      return res.send(JSON.stringify(row));
-    }
-    client.end();
-    return res.send("pong")
-  });
+ return res.send('pong');
 });
 app.get('/*', function (req, res) {
   res.sendFile(path.join(__dirname, 'build', 'index.html'));
