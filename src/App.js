@@ -9,7 +9,7 @@ export default class App extends Component {
       team1: "placeholder1",
       team2: "placeholder2",
       team3: "placeholder3",
-      t1comp1:  0,
+      t1comp1:  "",
       t2comp1:  "",
       t3comp1:  "",
       t1comp2:  "",
